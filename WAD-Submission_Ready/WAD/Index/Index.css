@@ -1,0 +1,388 @@
+/* Designed by Maciej Makar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+    margin: 0;
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: #121212;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .header .logo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .header .nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .header .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Lato', serif;
+  }
+  
+  .header .nav a:hover {
+    color: #36d07d;
+  }
+  
+  /* Hero Section Styling */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('Resources/Hero-image-banner.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #36d07d;
+    font-family:'Lato', serif;
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: white;
+    font-family:'Lato', serif;
+  }
+  
+  /* Feature Section Styling */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+  }
+  
+  .feature-card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #36d07d;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #36d07d;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Updated CTA Section Styling */
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cta {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding:120px 20px;
+    background-color: #1a1a1a;
+    width: 100%;
+  }
+  
+  .cta-content {
+    max-width: 500px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+    color: #36d07d;
+    margin-bottom: 20px;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #36d07d;
+    color: #121212;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #28a864;
+  }
+  
+  .cta-image {
+    flex: 0 1 350px;
+    text-align: center;
+  }
+  
+  .cta-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+
+
+  /* Media Queries for Responsiveness */
+  
+  /* For small screens (less than 768px wide) */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+  
+    .header .nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero {
+      height: 60vh;
+      padding: 0 10px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .cta {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .cta-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cta-content p {
+      font-size: 0.9rem;
+    }
+  
+    .cta-image {
+      flex: 0 1 100%;
+      margin-top: 20px;
+    }
+  }
+  
+  /* For extra small screens (less than 480px wide) */
+  @media (max-width: 480px) {
+    .cta-content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .cta-content p {
+      font-size: 0.8rem;
+    }
+  
+    .cta-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  /* Reviews Section Styling */
+.reviews {
+    padding: 80px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+  }
+  
+  .reviews-title {
+    font-size: 2.5rem;
+    color: #36d07d;
+    margin-bottom: 40px;
+  }
+  
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    gap: 20px;
+  }
+  
+  .review-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .review-image {
+    width: 100px; /* Image size */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .review-author {
+    font-size: 1rem;
+    font-style: italic;
+    color: #36d07d;
+  }
+  
+  /* Responsive Design for the Reviews Section */
+  @media (max-width: 768px) {
+    .reviews-container {
+      grid-template-columns: 1fr; /* Stack the reviews vertically on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .reviews-title {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+  
+    .review-image {
+      width: 80px; /* Smaller image size for mobile */
+      height: 80px;
+    }
+  
+    .review-text {
+      font-size: 0.9rem; /* Adjust text size for mobile screens */
+    }
+  
+    .review-author {
+      font-size: 0.9rem;
+    }
+  }
+
+/* Sign-up CTA Button Styling */
+body {
+    position: relative; /* Ensure the body takes up full height for positioning */
+    min-height: 100vh; /* Make sure the body takes full height of the screen */
+  }
+  
+  /* Container for the CTA button */
+  .cta-signup {
+    position: absolute;
+    bottom: 0; /* Places the button at the bottom of the body */
+    left: 50%; /* Centers it horizontally */
+    transform: translateX(-50%); /* Offsets the left positioning by half of the button's width */
+    width: auto; /* Ensures it does not stretch to 100% */
+    padding: 0px 0;
+    text-align: center; /* Centers the button text */
+    z-index: 1000; /* Keeps it above other content */
+  }
+  
+  .cta-signup-button {
+    padding: 15px 30px;
+    background-color: #36d07d;
+    color: #121212;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .cta-signup-button:hover {
+    background-color: #28a864;
+    transform: translateY(-3px); /* Slight hover effect */
+  }
+  

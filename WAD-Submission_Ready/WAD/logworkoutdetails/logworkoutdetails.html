@@ -1,0 +1,51 @@
+<!--Author - Asaad Ali -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log Workout and Weight Details</title>
+  <link rel="stylesheet" href="logworkoutdetails.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Meal Planner</h1>
+    <nav class="nav">
+      <a href="../Index/Index.html">Home</a>
+      <a href="../Support/Support.html">Support</a>
+      <a href="../Signuplogin/Signuplogin.php">Sign up or Login</a>
+    </nav>
+  </header>
+
+  <main class="workout-log-container">
+    <div class="content-wrapper">
+      <!-- Workout Log Form -->
+      <h1>Log your workout data</h1>
+  
+      <form class="workout-form" action="../php/process_workout.php" method="POST">
+        <input type="text" name="workout_type" placeholder="Workout Type" required>
+        <input type="number" name="calories_burned" placeholder="Calories Burned" required>
+        <input type="date" name="workout_date" required>
+        <button type="submit">Log Data</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="divider">
+        <hr>
+        <p>Keep track of your weight to monitor progress.</p>
+        <hr>
+      </div>
+
+      <!-- Weight Log Form -->
+      <h1>Log your weight</h1>
+
+      <form class="weight-form" action="../php/process_weight.php" method="POST">
+        <input type="number" name="current_weight" placeholder="Current Weight (kg)" step="0.1" required>
+        <input type="date" name="weight_date" required>
+        <button type="submit">Log Weight</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

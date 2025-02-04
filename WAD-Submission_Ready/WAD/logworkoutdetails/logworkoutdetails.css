@@ -1,0 +1,141 @@
+/* Designed by Asaad Ali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #121212;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header .nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header .nav a:hover {
+    color: #36d07d;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: #121212;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.workout-log-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.workout-log-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #121212;
+}
+
+.workout-form, .weight-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workout-form input, .weight-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.workout-form input:focus, .weight-form input:focus {
+    border-color: #36d07d;
+    outline: none;
+}
+
+.workout-form button, .weight-form button {
+    padding: 10px 20px;
+    background-color: #36d07d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.workout-form button:hover, .weight-form button:hover {
+    background-color: #28a864;
+}
+.divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.divider hr {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.divider p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+

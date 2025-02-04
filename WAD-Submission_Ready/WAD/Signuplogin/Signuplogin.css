@@ -1,0 +1,103 @@
+/* Designed by Maciej Makar */
+
+body {
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+      }
+
+
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: #121212;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .header .logo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .header .nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .header .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Lato', serif;
+  }
+  
+  .header .nav a:hover {
+    color: #36d07d;
+  }
+  
+/* Form Container Styling */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Form Card Styling */
+.form-card {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-card .form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #36d07d;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #28a864;
+}
+
+.btn-success {
+  background-color: #007bff;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-success:hover {
+  background-color: #0056b3;
+}
